@@ -1,0 +1,9 @@
+{
+  "hookRadius": 10,
+  "maxHookLength": 1000,
+  "minHookLength": 30,
+  "hookSpeed": 5,
+  "swingSpeed": 0.03,
+  "speedBonusPerStack": 3,
+  "timeLimit": 60
+}

@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "name": "gold1",
+    "weight": 3,
+    "value": 100,
+    "img": "gold1.png",
+    "grabbedImg": "grabbed1.png",
+    "height": 26,
+    "width": 26
+  },
+  {
+    "id": 2,
+    "name": "gold2",
+    "weight": 4.2,
+    "value": 200,
+    "img": "gold2.png",
+    "grabbedImg": "grabbed2.png",
+
+    "height": 44,
+    "width": 48
+  },
+  {
+    "id": 3,
+    "name": "gold3",
+    "weight": 4.5,
+    "value": 500,
+    "img": "gold3.png",
+    "grabbedImg": "grabbed3.png",
+
+    "height": 111,
+    "width": 129
+  },
+  {
+    "id": 4,
+    "name": "rock",
+    "weight": 4.8,
+    "value": 50,
+    "img": "rock.png",
+    "grabbedImg": "grabbed4.png",
+
+    "height": 82,
+    "width": 70
+  },
+  {
+    "id": 5,
+    "name": "diamond",
+    "weight": 1,
+    "value": 1000,
+    "img": "pig.png",
+    "grabbedImg": "grabbed5.png",
+
+    "height": 27,
+    "width": 56
+  },
+  {
+    "id": 6,
+    "name": "x",
+    "weight": 2,
+    "value": 200,
+    "img": ""
+  },
+  {
+    "id": 7,
+    "name": "x",
+    "weight": 2,
+    "value": 200,
+    "img": ""
+  }
+]

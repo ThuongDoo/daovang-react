@@ -1,0 +1,32 @@
+[
+  {
+    "ques": "1+1=",
+    "ans": ["a", "b", "c", "d"],
+    "correct": 0
+  },
+  {
+    "ques": "2",
+    "ans": ["a", "b", "c", "d"],
+    "correct": 0
+  },
+  {
+    "ques": "3",
+    "ans": ["a", "b", "c", "d"],
+    "correct": 0
+  },
+  {
+    "ques": "4",
+    "ans": ["a", "b", "c", "d"],
+    "correct": 0
+  },
+  {
+    "ques": "5",
+    "ans": ["a", "b", "c", "d"],
+    "correct": 0
+  },
+  {
+    "ques": "6",
+    "ans": ["a", "b", "c", "d"],
+    "correct": 0
+  }
+]
