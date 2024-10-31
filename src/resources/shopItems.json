@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Thuốc nổ",
+    "img": "thuocNo.png",
+    "description": "Sử dụng để phá huỷ vật thể đang bị kéo",
+    "cost": 1000
+  },
+  {
+    "id": 2,
+    "name": "Thuốc sức mạnh",
+    "img": "thuocSucManh.png",
+    "description": "Tăng lượng lớn sức mạnh trong 10s",
+    "cost": 1000
+  },
+  {
+    "id": 3,
+    "name": "Sách đá",
+    "img": "suuTapDa.png",
+    "description": "Kiếm được nhiều tiền hơn từ đá trong 60s",
+    "cost": 1000
+  },
+  {
+    "id": 4,
+    "name": "Cần cẩu siêu cấp",
+    "img": "canCauSieuCap.png",
+    "description": "Cần cẩu siêu cấp vip pro, tại sao không?",
+    "cost": 1000
+  },
+  {
+    "id": 5,
+    "name": "Đồng hồ xanh",
+    "img": "dongHoXanh.png",
+    "description": "Thời gian là vàng bạc",
+    "cost": 1000
+  }
+]

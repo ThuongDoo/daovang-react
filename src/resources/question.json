@@ -18,35 +18,5 @@
     "ques": "câu hỏi 4",
     "ans": ["a", "b", "c", "d"],
     "correct": 0
-  },
-  {
-    "ques": "câu hỏi 5",
-    "ans": ["a", "b", "c", "d"],
-    "correct": 0
-  },
-  {
-    "ques": "câu hỏi 7",
-    "ans": ["a", "b", "c", "d"],
-    "correct": 0
-  },
-  {
-    "ques": "câu hỏi 8",
-    "ans": ["a", "b", "c", "d"],
-    "correct": 0
-  },
-  {
-    "ques": "câu hỏi 9",
-    "ans": ["a", "b", "c", "d"],
-    "correct": 0
-  },
-  {
-    "ques": "câu hỏi 10",
-    "ans": ["a", "b", "c", "d"],
-    "correct": 0
-  },
-  {
-    "ques": "câu hỏi 11",
-    "ans": ["a", "b", "c", "d"],
-    "correct": 0
   }
 ]

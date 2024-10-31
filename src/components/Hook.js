@@ -2,9 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import hookImageSrc from "../resources/imgs/moc1.png";
 import config from "../resources/config.json";
 
-function Hook({ isGrab, pos, done, grabbedItem, speedStack, isPause }) {
-  const { maxHookLength, minHookLength, hookSpeed, speedBonusPerStack } =
-    config;
+function Hook({ isGrab, pos, done, grabbedItem, speedStack, itemUsed }) {
+  const { maxHookLength, minHookLength, speedBonusPerStack } = config;
   const divRef = useRef(null);
   const canvasRef = useRef(null);
 
@@ -15,7 +14,13 @@ function Hook({ isGrab, pos, done, grabbedItem, speedStack, isPause }) {
   const [hookLength, setHookLength] = useState(minHookLength); // Chiều dài ban đầu của móc
   const [swingSpeed, setSwingSpeed] = useState(config.swingSpeed); // Tốc độ lắc qua lại của móc
   const [isExtending, setIsExtending] = useState(false); // Trạng thái kéo dài của móc
+  const [hookSpeed, setHookSpeed] = useState(config.hookSpeed);
+  const [isUsed1, setIsUsed1] = useState(false);
+  const [isUsed2, setIsUsed2] = useState(false);
+  const [isUsed4, setIsUsed4] = useState(false);
+  const [isBoom, setIsBoom] = useState(0);
   const originalImgSrc = "moc1.png";
+  const boomImg = "boom.png";
 
   const updateCanvasSize = () => {
     const div = divRef.current;
@@ -37,6 +42,40 @@ function Hook({ isGrab, pos, done, grabbedItem, speedStack, isPause }) {
     }
   }, [isGrab]);
 
+  // Xử lý item
+  useEffect(() => {
+    switch (itemUsed?.id) {
+      case 1: {
+        setIsUsed1(true);
+        setIsBoom(1);
+        setTimeout(() => {
+          setIsBoom(-1);
+        }, 200);
+        break;
+      }
+      case 2: {
+        setHookSpeed(7);
+        setTimeout(() => {
+          setHookSpeed(config.hookSpeed);
+        }, 10000);
+        break;
+      }
+      case 4: {
+        setSwingSpeed(0.23);
+        setHookSpeed(10);
+        setIsUsed4(true);
+        setTimeout(() => {
+          setSwingSpeed(config.swingSpeed);
+          setIsUsed4(false);
+          setHookAngle(0);
+          setHookSpeed(config.hookSpeed);
+        }, 10000);
+        break;
+      }
+      default:
+    }
+  }, [itemUsed]);
+
   // Xử lý sự kiện phím nhấn
   useEffect(() => {
     updateCanvasSize();
@@ -44,7 +83,7 @@ function Hook({ isGrab, pos, done, grabbedItem, speedStack, isPause }) {
     // Cập nhật kích thước canvas khi thay đổi kích thước cửa sổ
 
     const handleKeyDown = (event) => {
-      if (event.key === "ArrowDown") {
+      if (event.key === " ") {
         setIsExtending(true);
       }
     };
@@ -60,40 +99,52 @@ function Hook({ isGrab, pos, done, grabbedItem, speedStack, isPause }) {
 
   // Cập nhật trạng thái móc
   useEffect(() => {
-    if (isPause !== true) {
-      const interval = setInterval(() => {
-        setHookLength((prevLength) => {
-          if (isExtending && prevLength < maxHookLength) {
-            return prevLength + hookSpeed;
-          } else if (!isExtending && prevLength > minHookLength) {
-            if (isGrab) {
-              return (
-                prevLength -
-                (hookSpeed -
-                  grabbedItem.weight +
-                  (hookSpeed - grabbedItem.weight) *
-                    speedStack *
-                    speedBonusPerStack)
-              );
-            } else {
-              return prevLength - hookSpeed;
-            }
-          } else if (!isExtending) {
-            setHookAngle((prevAngle) => {
-              let newAngle = prevAngle + swingSpeed;
+    const interval = setInterval(() => {
+      setHookLength((prevLength) => {
+        if (isExtending && prevLength < maxHookLength) {
+          return prevLength + hookSpeed;
+        } else if (!isExtending && prevLength > minHookLength) {
+          if (isGrab && isUsed1 === false) {
+            return (
+              prevLength -
+              (hookSpeed -
+                grabbedItem.weight +
+                (hookSpeed - grabbedItem.weight) *
+                  speedStack *
+                  speedBonusPerStack)
+            );
+          } else {
+            return prevLength - hookSpeed;
+          }
+        } else if (!isExtending) {
+          setHookAngle((prevAngle) => {
+            if (isUsed1 === true) setIsUsed1(false);
+            let newAngle = prevAngle + swingSpeed;
 
+            if (isUsed4 !== true) {
+              // if (newAngle > Math.PI * 2 || newAngle < 0) {
+              //   setSwingSpeed(-swingSpeed); // Đổi hướng lắc
+              // }
               if (newAngle > Math.PI || newAngle < 0) {
                 setSwingSpeed(-swingSpeed); // Đổi hướng lắc
               }
-              return newAngle;
-            });
-          }
-          return prevLength;
-        });
-      }, 16); // Tốc độ cập nhật khoảng 60fps
-      return () => clearInterval(interval);
-    }
-  }, [swingSpeed, isExtending, isGrab, grabbedItem, speedStack, isPause]);
+            }
+            return newAngle;
+          });
+        }
+        return prevLength;
+      });
+    }, 16); // Tốc độ cập nhật khoảng 60fps
+    return () => clearInterval(interval);
+  }, [
+    swingSpeed,
+    isExtending,
+    isGrab,
+    grabbedItem,
+    speedStack,
+    isUsed4,
+    isUsed1,
+  ]);
 
   // Vẽ móc
   useEffect(() => {
@@ -101,13 +152,26 @@ function Hook({ isGrab, pos, done, grabbedItem, speedStack, isPause }) {
     const ctx = canvas.getContext("2d");
     const hookImage = new Image();
     if (hookLength <= minHookLength) {
-      hookImage.src = require(`../resources/imgs/${originalImgSrc}`);
-      done(true);
+      if (isUsed1 === true) {
+        setIsBoom(0);
+        done(false);
+      } else {
+        hookImage.src = require(`../resources/imgs/${originalImgSrc}`);
+
+        done(true);
+      }
     } else if (isGrab) {
-      hookImage.src = require(`../resources/imgs/${grabbedItem.grabbedImg}`);
+      if (isBoom === 1) {
+        hookImage.src = require(`../resources/imgs/${boomImg}`);
+      } else if (isBoom === 0) {
+        hookImage.src = require(`../resources/imgs/${grabbedItem.grabbedImg}`);
+      } else {
+        hookImage.src = require(`../resources/imgs/${originalImgSrc}`);
+      }
     } else {
       hookImage.src = require(`../resources/imgs/${originalImgSrc}`);
     }
+
     const drawHook = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -142,9 +206,9 @@ function Hook({ isGrab, pos, done, grabbedItem, speedStack, isPause }) {
       pos([hookX, hookY]);
       if (
         hookX <= 0 ||
-        hookX >= divRef.current.offsetWidth ||
+        hookX >= divRef?.current?.offsetWidth ||
         hookY <= 0 ||
-        hookY >= divRef.current.offsetHeight
+        hookY >= divRef?.current?.offsetHeight
       ) {
         setIsExtending(false);
       }
@@ -153,7 +217,7 @@ function Hook({ isGrab, pos, done, grabbedItem, speedStack, isPause }) {
       drawHook();
     };
     drawHook();
-  }, [hookAngle, hookLength, grabbedItem, isGrab]);
+  }, [hookAngle, hookLength, grabbedItem, isGrab, isUsed1, isBoom]);
 
   return (
     <div className=" w-full h-full flex" ref={divRef}>

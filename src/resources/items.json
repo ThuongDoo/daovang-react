@@ -47,24 +47,10 @@
     "name": "diamond",
     "weight": 1,
     "value": 1000,
-    "img": "pig.png",
+    "img": "diamond.png",
     "grabbedImg": "grabbed5.png",
 
     "height": 27,
     "width": 56
-  },
-  {
-    "id": 6,
-    "name": "x",
-    "weight": 2,
-    "value": 200,
-    "img": ""
-  },
-  {
-    "id": 7,
-    "name": "x",
-    "weight": 2,
-    "value": 200,
-    "img": ""
   }
 ]
