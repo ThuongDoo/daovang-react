@@ -11,9 +11,13 @@ import {
 import GameOver from "./GameOver";
 import Shop from "./Shop";
 import questionList from "../resources/question.json";
+import { useLocation } from "react-router-dom";
 
 function Game() {
   const levels = [level0, level1, level2, level3, level4, level5];
+
+  const location = useLocation();
+  const name = location.state?.name;
 
   const [level, setLevel] = useState(0);
   const [shopItems, setShopItems] = useState(new Array(4).fill(null));
@@ -69,11 +73,13 @@ function Game() {
           shopItems={shopItems}
           oldScore={score}
           PQuestion={questions}
+          name={name}
         />
       ) : isPause === -1 ? (
         <Shop score={score} boughtItems={shopItems} onNext={handleNextLevel} />
       ) : (
         <GameOver
+          name={name}
           next={isNext}
           onRePlay={handleGameOver}
           levelMax={levels.length}

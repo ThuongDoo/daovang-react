@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import background from "../resources/imgs/startMenu.png";
 import gold4 from "../resources/imgs/gold4.png";
@@ -7,13 +7,34 @@ import start from "../resources/imgs/button_start.png";
 
 function MainMenu() {
   const navigate = useNavigate();
+  const [name, setName] = useState("");
+  const handleChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleNavigate = () => {
+    navigate("game", { state: { name: name } });
+  };
   return (
     <div className=" w-full h-full bg-black flex justify-center items-center">
       <div className=" absolute z-20 top-32 left-[350px] space-y-12">
-        <div onClick={() => navigate("game")} className=" cursor-pointer">
-          <h1 className=" text-black absolute text-6xl font-bold z-20 top-1/4 left-1/4 text-center ">
-            START
-          </h1>
+        <div className="  relative">
+          <div className=" text-black absolute text-6xl font-bold z-20 flex flex-col justify-center items-center w-full h-full">
+            <input
+              placeholder="Nhập tên"
+              value={name}
+              onChange={handleChange}
+              type="text"
+              className="text-3xl w-44 bg-black text-white px-2"
+            ></input>
+            <button
+              onClick={handleNavigate}
+              disabled={!name.trim()}
+              className=" disabled:text-gray-500"
+            >
+              START
+            </button>
+          </div>
 
           <img
             src={gold4}

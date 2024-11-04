@@ -3,7 +3,7 @@ import { ArrowPathIcon } from "@heroicons/react/24/outline";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
 
-function GameOver({ onRePlay, levelMax, currentLevel, score }) {
+function GameOver({ onRePlay, levelMax, currentLevel, score, name = "" }) {
   const navigate = useNavigate();
 
   return (
@@ -13,6 +13,7 @@ function GameOver({ onRePlay, levelMax, currentLevel, score }) {
       <h1 className=" text-5xl font-bold">
         {currentLevel === levelMax - 1 ? "YOU WIN" : "GAME OVER"}
       </h1>
+      <h1 className=" text-6xl">PLAYER {name}</h1>
       <h1 className=" text-6xl font-bold">{score}</h1>
       <div className=" flex gap-x-20">
         <button

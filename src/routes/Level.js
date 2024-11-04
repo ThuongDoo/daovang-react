@@ -18,6 +18,7 @@ function Level({
   shopItems,
   oldScore,
   PQuestion,
+  name = "",
 }) {
   const { hookRadius, timeLimit } = config;
 
@@ -297,18 +298,17 @@ function Level({
               </div>
             ))}
           </div>
-          <div className=" flex items-center flex-col">
+          <div className=" flex items-center flex-col text-xl font-mono font-bold">
             {/* <NumberDisplay number={score} /> */}
-            <h1 className=" font-mono font-bold text-4xl">
-              LEVEL {level.index}
-            </h1>
-            <h1 className=" text-5xl font-mono font-bold">{seconds} s</h1>
-
-            {/* <NumberDisplay number={scoreRequire} /> */}
-
-            <h1 className=" text-3xl font-mono font-bold">
+            <h1>PLAYER: {name}</h1>
+            <h1 className="  ">
               SCORE: {score} / {scoreRequire}
             </h1>
+
+            <h1 className="  ">TIME: {seconds}s</h1>
+            <h1 className="  ">LEVEL: {level.index}</h1>
+
+            {/* <NumberDisplay number={scoreRequire} /> */}
           </div>
         </div>
       </div>
