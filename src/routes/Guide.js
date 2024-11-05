@@ -8,15 +8,15 @@ function Guide() {
       <h1 className=" text-6xl font-bold">HƯỚNG DẪN</h1>
       <div className=" text-3xl flex flex-col items-start gap-y-20">
         <h1 className=" text-start">
-          kéo các vật phẩm để kiếm điểm, trong quá trình kéo bạn có thể trả lời
+          Kéo các vật phẩm để kiếm điểm, trong quá trình kéo bạn có thể trả lời
           các câu hỏi để tăng tốc độ kéo. Kéo càng nhiều vật phẩm để đủ điểm qua
-          màn và mua các trạng bị hữu ích
+          màn và mua các trang bị hữu ích.
         </h1>
         <h1>
-          <span className=" font-bold">[SPACE]</span> : thả móc kéo các vật phẩm
+          <span className=" font-bold">[SPACE]</span> : Thả móc kéo các vật phẩm
         </h1>
         <h1>
-          <span className=" font-bold">[1] [2] [3] [4] </span>: sử dụng các
+          <span className=" font-bold">[1] [2] [3] [4] </span>: Sử dụng các
           trang bị
         </h1>
       </div>
