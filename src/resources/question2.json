@@ -1,0 +1,22 @@
+[
+  {
+    "ques": "câu hỏi 1",
+    "ans": ["a", "b", "c", "d"],
+    "correct": 0
+  },
+  {
+    "ques": "câu hỏi 2",
+    "ans": ["a", "b", "c", "d"],
+    "correct": 0
+  },
+  {
+    "ques": "câu hỏi 3",
+    "ans": ["a", "b", "c", "d"],
+    "correct": 0
+  },
+  {
+    "ques": "câu hỏi 4",
+    "ans": ["a", "b", "c", "d"],
+    "correct": 0
+  }
+]
