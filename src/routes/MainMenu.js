@@ -42,12 +42,20 @@ function MainMenu() {
             className="size-96  transform scale-x-[-1] "
           ></img>
         </div>
-        <button
-          onClick={() => navigate("guide")}
-          className=" text-black bg-yellow-600 rounded-xl font-bold text-3xl px-8 py-4"
-        >
-          HƯỚNG DẪN
-        </button>
+        <div className=" flex flex-col gap-y-2">
+          <button
+            onClick={() => navigate("guide")}
+            className=" text-black bg-yellow-600 rounded-xl font-bold text-3xl px-8 py-4"
+          >
+            HƯỚNG DẪN
+          </button>
+          <button
+            onClick={() => navigate("score-board")}
+            className=" text-black bg-yellow-600 rounded-xl font-bold text-3xl px-8 py-4"
+          >
+            BẢNG ĐIỂM
+          </button>
+        </div>
       </div>
 
       <img src={background} alt=" " className=" absolute"></img>

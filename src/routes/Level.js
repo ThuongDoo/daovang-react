@@ -38,8 +38,6 @@ function Level({
   const [itemUsed, setItemUsed] = useState(null);
   const [isUsed3, setIsUsed3] = useState(false);
 
-  console.log(questions.length);
-
   useEffect(() => {
     // Hàm xử lý sự kiện nhấn phím
     const handleKeyPress = (event) => {
@@ -200,20 +198,22 @@ function Level({
   };
 
   const handleDone = (data) => {
-    if (grabbedItem.value) {
-      let newValue = grabbedItem.value;
-      if (isUsed3 === true) {
-        if (grabbedItem.id === 4) {
-          newValue *= 10;
+    if (isGrab === true) {
+      if (grabbedItem.value) {
+        let newValue = grabbedItem.value;
+        if (isUsed3 === true) {
+          if (grabbedItem.id === 4) {
+            newValue *= 10;
+          }
+        } else if (data === false) {
+          newValue = 0;
         }
-      } else if (data === false) {
-        newValue = 0;
+        const newScore = score + newValue;
+        setGrabbedItem({});
+        setScore(newScore);
       }
-      const newScore = score + newValue;
-      setGrabbedItem({});
-      setScore(newScore);
+      setIsGrab(false);
     }
-    setIsGrab(false);
   };
 
   const isCollision = ({ deleteIndex }) => {
@@ -231,6 +231,12 @@ function Level({
       setTimeout(() => {
         setSpeedStack((prevCount) => prevCount - 1);
       }, 2000);
+    } else {
+      console.log("haha");
+      setIsGrab(false);
+      const newItems = items;
+      newItems.push(grabbedItem);
+      setItems(newItems);
     }
     setTimeout(() => {
       setSelectedAnswers(null);

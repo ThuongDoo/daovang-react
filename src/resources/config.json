@@ -5,5 +5,5 @@
   "hookSpeed": 5,
   "swingSpeed": 0.03,
   "speedBonusPerStack": 3,
-  "timeLimit": 60
+  "timeLimit": 1
 }

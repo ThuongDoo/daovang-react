@@ -10,19 +10,19 @@
     "correct": 1
   },
   {
-    "ques": "câu hỏi 2: Để tạo một biểu mẫu đơn giản trong ứng dụng cơ sở dữ liệu, bạn cần: ",
+    "ques": "câu hỏi 1: Để tạo một biểu mẫu đơn giản trong ứng dụng cơ sở dữ liệu, bạn cần: ",
     "ans": [
       "a.Chỉ sử dụng HTML",
       "b. Kết hợp HTML, CSS và JavaScript",
       "c. Sử dụng một công cụ thiết kế GUI hoặc phần mềm quản lý cơ sở dữ liệu",
       "d. Không cần bất kỳ công cụ nào"
     ],
-    "correct": 2
+    "correct": 1
   },
   {
-    "ques": "câu hỏi 3: Để tạo biểu mẫu ta chọn đối tượng nào trên bảng chọn đối tượng? ",
+    "ques": "câu hỏi 1: Để tạo biểu mẫu ta chọn đối tượng nào trên bảng chọn đối tượng? ",
     "ans": ["a. Queries ", "b. Tables ", "c. Reports", "d. Forms"],
-    "correct": 3
+    "correct": 1
   },
   {
     "ques": "câu hỏi 4: Trong Access, ta có thể sử dụng biểu mẫu để",
@@ -32,7 +32,7 @@
       "c. Sửa cấu trúc bảng",
       "d. Lập báo cáo"
     ],
-    "correct": 0
+    "correct": 1
   },
   {
     "ques": "câu hỏi 5: Chỉnh sửa biểu mẫu (thay đổi hình thức biểu mẫu) chỉ thực hiện được ở chế độ",
@@ -47,7 +47,7 @@
       "c. tổ chức theo thứ tự địa chỉ đường",
       "d. không cho phép người xem sửa đổi dữ liệu"
     ],
-    "correct": 3
+    "correct": 1
   },
   {
     "ques": "câu hỏi 7: Trong Access, muốn tạo biểu mẫu theo cách dùng thuật sĩ, ta chọn",
@@ -57,7 +57,7 @@
       "c. Create form for using Wizard",
       "d. Create form with using Wizard"
     ],
-    "correct": 0
+    "correct": 1
   },
   {
     "ques": "câu hỏi 8: Trong chế độ thiết kế của biểu mẫu, ta có thể",
@@ -67,7 +67,7 @@
       "c. Thiết kế mới cho biểu mẫu, xem hay sửa đổi thiết kế cũ",
       "d. Thiết kế mới cho biểu mẫu, xem hay sửa đổi thiết kế cũ, xem, sửa, xóa và nhập dữ liệu"
     ],
-    "correct": 3
+    "correct": 1
   },
   {
     "ques": "câu hỏi 9: Các thanh trượt dọt và ngang được dùng để",
@@ -77,16 +77,16 @@
       "c. ọc bản ghi theo điều kiện",
       "d. thay đổi các điều kiện lọc, điều kiện sắp xếp ngay trên biểu mẫu"
     ],
-    "correct": 0
+    "correct": 1
   },
   {
-    "ques": "câu hỏi 10:  Những ứng dụng CSDL lớn và phức tạp, các biểu mẫu như",
+    "ques": "câu hỏi 11:  Những ứng dụng CSDL lớn và phức tạp, các biểu mẫu như",
     "ans": [
       "a. Thuộc tính của đối tượng ",
       "b. Chức năng của đối tượng  ",
       "c. Một thành phần của phần mềm ứng dụng",
       "d. Ngôn ngữ lập trình"
     ],
-    "correct": 2
+    "correct": 1
   }
 ]
