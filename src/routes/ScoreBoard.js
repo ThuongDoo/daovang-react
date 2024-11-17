@@ -11,8 +11,9 @@ function ScoreBoard() {
     const getScore = async () => {
       try {
         await api.get("user").then((res) => {
-          console.log("hih");
-          setScore(res.data.users);
+          console.log(res.data.users);
+          const newScores = res.data.users.sort((a, b) => b.score - a.score);
+          setScore(newScores);
         });
       } catch (error) {
         console.error("Error saving score: ", error);
@@ -26,9 +27,11 @@ function ScoreBoard() {
       <h1 className=" text-6xl font-bold">BẢNG ĐIỂM</h1>
       <div className=" w-full overflow-y-auto flex-grow text-3xl">
         {score?.map((item, index) => (
-          <div className=" flex justify-between  items-center" key={index}>
-            <h1>{item.name}</h1>
-            <h1>{item.score}</h1>
+          <div className="grid grid-cols-4 w-full items-center" key={index}>
+            <h1 className=" text-start">{index + 1}</h1>
+            <h1 className=" text-start">{item.name}</h1>
+            <h1 className=" text-start">{item.score}</h1>
+            <h1 className=" text-end">{formatDate(item.createdAt)}</h1>
           </div>
         ))}
       </div>
@@ -51,3 +54,8 @@ function ScoreBoard() {
 }
 
 export default ScoreBoard;
+
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  return `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
+}

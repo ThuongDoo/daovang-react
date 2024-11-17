@@ -39,9 +39,10 @@ function Game() {
 
   const handleLevelEnd = (value) => {
     const { state, score, questions } = value;
+    setScore(score);
+
     if (state === 1) {
       setIsPause(-1);
-      setScore(score);
       setQuestions(questions);
       if (level < levels.length - 1) {
         setIsPause(-1);
