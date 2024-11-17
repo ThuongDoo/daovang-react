@@ -10,19 +10,19 @@
     "correct": 1
   },
   {
-    "ques": "câu hỏi 1: Để tạo một biểu mẫu đơn giản trong ứng dụng cơ sở dữ liệu, bạn cần: ",
+    "ques": "câu hỏi 2: Để tạo một biểu mẫu đơn giản trong ứng dụng cơ sở dữ liệu, bạn cần: ",
     "ans": [
       "a.Chỉ sử dụng HTML",
       "b. Kết hợp HTML, CSS và JavaScript",
       "c. Sử dụng một công cụ thiết kế GUI hoặc phần mềm quản lý cơ sở dữ liệu",
       "d. Không cần bất kỳ công cụ nào"
     ],
-    "correct": 1
+    "correct": 2
   },
   {
-    "ques": "câu hỏi 1: Để tạo biểu mẫu ta chọn đối tượng nào trên bảng chọn đối tượng? ",
+    "ques": "câu hỏi 3: Để tạo biểu mẫu ta chọn đối tượng nào trên bảng chọn đối tượng? ",
     "ans": ["a. Queries ", "b. Tables ", "c. Reports", "d. Forms"],
-    "correct": 1
+    "correct": 3
   },
   {
     "ques": "câu hỏi 4: Trong Access, ta có thể sử dụng biểu mẫu để",
@@ -32,7 +32,7 @@
       "c. Sửa cấu trúc bảng",
       "d. Lập báo cáo"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "ques": "câu hỏi 5: Chỉnh sửa biểu mẫu (thay đổi hình thức biểu mẫu) chỉ thực hiện được ở chế độ",
@@ -47,7 +47,7 @@
       "c. tổ chức theo thứ tự địa chỉ đường",
       "d. không cho phép người xem sửa đổi dữ liệu"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "ques": "câu hỏi 7: Trong Access, muốn tạo biểu mẫu theo cách dùng thuật sĩ, ta chọn",
@@ -57,7 +57,7 @@
       "c. Create form for using Wizard",
       "d. Create form with using Wizard"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "ques": "câu hỏi 8: Trong chế độ thiết kế của biểu mẫu, ta có thể",
@@ -67,26 +67,221 @@
       "c. Thiết kế mới cho biểu mẫu, xem hay sửa đổi thiết kế cũ",
       "d. Thiết kế mới cho biểu mẫu, xem hay sửa đổi thiết kế cũ, xem, sửa, xóa và nhập dữ liệu"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "ques": "câu hỏi 9: Các thanh trượt dọt và ngang được dùng để",
     "ans": [
       "a. xem những dữ liệu bị khuất trong cửa sổ biểu mẫu ",
-      "b. huyển đến xem bản ghi đứng trước hoặc đứng sau bản ghi hiện thời",
-      "c. ọc bản ghi theo điều kiện",
+      "b. chuyển đến xem bản ghi đứng trước hoặc đứng sau bản ghi hiện thời",
+      "c. Đọc bản ghi theo điều kiện",
       "d. thay đổi các điều kiện lọc, điều kiện sắp xếp ngay trên biểu mẫu"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
-    "ques": "câu hỏi 11:  Những ứng dụng CSDL lớn và phức tạp, các biểu mẫu như",
+    "ques": "câu hỏi 10:  Những ứng dụng CSDL lớn và phức tạp, các biểu mẫu như",
     "ans": [
       "a. Thuộc tính của đối tượng ",
       "b. Chức năng của đối tượng  ",
       "c. Một thành phần của phần mềm ứng dụng",
       "d. Ngôn ngữ lập trình"
     ],
+    "correct": 2
+  },
+  {
+    "ques": "câu hỏi 11: Câu lệnh SQL nào được sử dụng để truy vấn dữ liệu từ một bảng?",
+    "ans": ["a. INSERT ", "b.  DELETE", "c. SELECT ", "d. UPDATE"],
+    "correct": 2
+  },
+  {
+    "ques": "câu hỏi 12: Truy vấn CSDL là gì?",
+    "ans": [
+      "a. Yêu cầu thực hiện các phép tính dữ liệu ",
+      "b.  Yêu cầu hiển thị kết quả tìm kiếm dữ liệu",
+      "c. Yêu cầu thao tác trên dữ liệu",
+      "d. D.Yêu cầu phân tích xu hướng dữ liệu"
+    ],
     "correct": 1
+  },
+  {
+    "ques": "câu hỏi 13: Bảng DIEM có các trường MOT_TIET, HOC_KY. Trong Mẫu hỏi, biểu thức số học để tạo trường mới TRUNG_BINH, lệnh nào sau đây là đúng:",
+    "ans": [
+      "a. TRUNG_BINH:(2*[MOT_TIET] +3*[HOC_KY])/5 ",
+      "b. TRUNG_BINH:(2*MOT_TIET+3*HOC_KY)/5",
+      "c. C.TRUNG_BINH:(2*[MOT_TIET] +3*[HOC_KY]):5",
+      "d. TRUNG_BINH=(2*[MOT_TIET] +3*[HOC_KY])/5"
+    ],
+    "correct": 0
+  },
+  {
+    "ques": "câu hỏi 14: SQL là viết tắt của cụm từ nào?",
+    "ans": [
+      "a. A.Simple Query Language",
+      "b. B.Standard Query Language",
+      "c. D.Sequential Query Language",
+      "d. Structured Query Language"
+    ],
+    "correct": 3
+  },
+  {
+    "ques": "câu hỏi 15: Hai bản ghi thuộc hai bảng khác nhau trong CSDL thỏa mãn điều kiện nào?",
+    "ans": [
+      "a. A.Điều kiện bổ sung",
+      "b. C.Điều kiện liên kết",
+      "c. D.Điều kiện kết nối",
+      "d. B.Điều kiện sao chép"
+    ],
+    "correct": 2
+  },
+  {
+    "ques": "câu hỏi 16: Bước nào sau đây để tạo một báo cáo đơn giản nhanh chóng?",
+    "ans": [
+      "a. A.File/New",
+      "b.  B.File/Open",
+      "c. D.Chọn bảng dữ liệu cần tạo báo cáo",
+      "d. C.Nháy chọn Create/Report Wizard"
+    ],
+    "correct": 3
+  },
+  {
+    "ques": "câu hỏi 17: Một bảng có khóa chính là ID_A và bảng B có khóa ngoại ID_A. Điều này có nghĩa là:",
+    "ans": [
+      "a. Bảng A không thể có giá trị NULL",
+      "b. Mỗi giá trị của ID_A trong bảng B phải tồn tại trong bảng A",
+      "c. Bảng B không thể có bản ghi nào",
+      "d. Khóa ngoại không cần phải duy nhất"
+    ],
+    "correct": 1
+  },
+  {
+    "ques": "câu hỏi 18: Đặc điểm nào sau đây không phải là đặc điểm của khóa chính?",
+    "ans": [
+      "a. Có thể có giá trị trùng lặp",
+      "b. Không có giá trị NULL",
+      "c. Phải có giá trị duy nhất",
+      "d.  Có thể là một hoặc nhiều thuộc tính"
+    ],
+    "correct": 0
+  },
+  {
+    "ques": "câu hỏi 19: Khi một bản ghi trong bảng cha bị xóa, điều gì xảy ra với các bản ghi liên quan trong bảng con nếu không có ràng buộc xóa?",
+    "ans": [
+      "a. Bản ghi trong bảng con sẽ tự động bị xóa",
+      "b. Bản ghi trong bảng con sẽ vẫn tồn tại",
+      "c.  Bản ghi trong bảng con sẽ trở thành NULL",
+      "d. Không có gì xảy ra"
+    ],
+    "correct": 1
+  },
+  {
+    "ques": "câu hỏi 20: Biện pháp nào có thể giúp bảo vệ cơ sở dữ liệu khỏi các cuộc tấn công của hacker?",
+    "ans": [
+      "a. Không sử dụng tường lửa",
+      "b. Tắt chế độ xác thực người dùng",
+      "c. Cập nhật thường xuyên phần mềm và hệ điều hành",
+      "d. Sử dụng mật khẩu mặc định"
+    ],
+    "correct": 2
+  },
+  {
+    "ques": "câu hỏi 21: Trong cơ sở dữ liệu, mã hóa dữ liệu có mục đích gì?",
+    "ans": [
+      "a. Tăng tốc độ truy vấn",
+      "b. Bảo vệ dữ liệu khỏi việc bị đọc trái phép",
+      "c. Giảm kích thước của dữ liệu",
+      "d. Tạo bản sao lưu"
+    ],
+    "correct": 1
+  },
+  {
+    "ques": "câu hỏi 22: Một trong những biện pháp bảo vệ thông tin nhạy cảm là:",
+    "ans": [
+      "a.  Sử dụng kết nối không bảo mật",
+      "b. Lưu trữ dữ liệu trên máy tính cá nhân",
+      "c. Sử dụng SSL/TLS để mã hóa dữ liệu truyền tải",
+      "d. Không cần thực hiện bảo mật"
+    ],
+    "correct": 2
+  },
+  {
+    "ques": "câu hỏi 23: Ai nên có quyền truy cập vào cơ sở dữ liệu?",
+    "ans": [
+      "a. Chỉ những người cần thiết cho công việc của họ",
+      "b. Tất cả nhân viên trong công ty",
+      "c. Bất kỳ ai có thể tìm thấy địa chỉ IP",
+      "d. Không cần kiểm soát"
+    ],
+    "correct": 0
+  },
+  {
+    "ques": "câu hỏi 24: Kiến trúc nào sau đây được sử dụng phổ biến nhất trong các hệ quản trị cơ sở dữ liệu hiện nay?",
+    "ans": [
+      "a. Kiến trúc 1 lớp",
+      "b. Kiến trúc 2 lớp",
+      "c. Kiến trúc 3 lớp",
+      "d. Kiến trúc phân tán"
+    ],
+    "correct": 2
+  },
+  {
+    "ques": "câu hỏi 25: Trong kiến trúc 3 lớp, lớp nào chịu trách nhiệm xử lý logic nghiệp vụ?",
+    "ans": [
+      "a. Lớp người dùng (Presentation Layer)",
+      "b.  Lớp truy cập dữ liệu (Data Access Layer)",
+      "c. Lớp cơ sở dữ liệu (Database Layer)",
+      "d. Lớp ứng dụng (Application Layer)"
+    ],
+    "correct": 2
+  },
+  {
+    "ques": "câu hỏi 26: Kiến trúc 2 lớp bao gồm:",
+    "ans": [
+      "a. Lớp người dùng và lớp cơ sở dữ liệu",
+      "b. Lớp ứng dụng và lớp trình bày",
+      "c. Lớp dữ liệu và lớp logic",
+      "d. Lớp truy cập và lớp bảo mật"
+    ],
+    "correct": 0
+  },
+  {
+    "ques": "câu hỏi 27: Một ưu điểm của kiến trúc 3 lớp là:",
+    "ans": [
+      "a. Tốn kém hơn trong việc phát triển",
+      "b. Khó khăn trong việc phân tích dữ liệu",
+      "c. Dễ dàng bảo trì và mở rộng",
+      "d. Không cần bảo mật"
+    ],
+    "correct": 2
+  },
+  {
+    "ques": "câu hỏi 28: Câu hỏi 6: Trong kiến trúc 3 lớp, lớp nào chịu trách nhiệm lưu trữ và quản lý dữ liệu?",
+    "ans": [
+      "a. Lớp người dùng",
+      "b. Lớp ứng dụng",
+      "c. Lớp truy cập dữ liệu",
+      "d. Lớp cơ sở dữ liệu"
+    ],
+    "correct": 3
+  },
+  {
+    "ques": "câu hỏi 29: Kiến trúc nào cho phép người dùng tương tác trực tiếp với cơ sở dữ liệu mà không cần ứng dụng trung gian?",
+    "ans": [
+      "a. Kiến trúc 1 lớp",
+      "b. Kiến trúc 2 lớp",
+      "c. Kiến trúc 3 lớp",
+      "d. Kiến trúc phân tán"
+    ],
+    "correct": 1
+  },
+  {
+    "ques": "câu hỏi 30: Trong cơ sở dữ liệu quan hệ, bảng là gì?",
+    "ans": [
+      "a. Một cấu trúc lưu trữ dữ liệu dưới dạng hàng và cột",
+      "b. Một loại khóa dùng để xác định bản ghi",
+      "c. Một phép toán để truy vấn dữ liệu",
+      "d. Một định nghĩa về mối quan hệ giữa các bảng"
+    ],
+    "correct": 0
   }
 ]
