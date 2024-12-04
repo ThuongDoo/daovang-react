@@ -32,7 +32,7 @@ function MainMenu() {
               disabled={!name.trim()}
               className=" disabled:text-gray-500"
             >
-              START
+              BẮT ĐẦU
             </button>
           </div>
 

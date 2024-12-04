@@ -306,13 +306,13 @@ function Level({
           </div>
           <div className=" flex items-center flex-col text-xl font-mono font-bold">
             {/* <NumberDisplay number={score} /> */}
-            <h1>PLAYER: {name}</h1>
+            <h1>NGƯỜI CHƠI: {name}</h1>
             <h1 className="  ">
-              SCORE: {score} / {scoreRequire}
+              ĐIỂM: {score} / {scoreRequire}
             </h1>
 
-            <h1 className="  ">TIME: {seconds}s</h1>
-            <h1 className="  ">LEVEL: {level.index}</h1>
+            <h1 className="  ">THỜI GIAN: {seconds}s</h1>
+            <h1 className="  ">MÀN CHƠI: {level.index}</h1>
 
             {/* <NumberDisplay number={scoreRequire} /> */}
           </div>
