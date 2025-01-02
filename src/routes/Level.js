@@ -8,7 +8,6 @@ import Hook from "../components/Hook";
 import NumberDisplay from "../components/NumberDisplay";
 import config from "../resources/config.json";
 import GameOver from "./GameOver";
-import questionList from "../resources/question.json";
 
 function Level({
   level,
@@ -123,7 +122,6 @@ function Level({
           score: score,
           shopItems: newShopItems,
           questions,
-          questions,
         });
       }
       onPause(true);
@@ -145,13 +143,15 @@ function Level({
 
   //change later
   useEffect(() => {
-    const newQuestions = shuffleArray(PQuestion);
-    setQuestions(newQuestions);
+    if (PQuestion?.length !== 0) {
+      const newQuestions = shuffleArray(PQuestion);
+      setQuestions(newQuestions);
+    }
   }, [PQuestion]);
 
   useEffect(() => {
-    if (questions.length === 0) {
-      const newQuestions = shuffleArray(questionList);
+    if (questions?.length === 0) {
+      const newQuestions = shuffleArray(PQuestion);
       setQuestions(newQuestions);
     }
   }, [questions]);

@@ -8,6 +8,59 @@ import start from "../resources/imgs/button_start.png";
 function MainMenu() {
   const navigate = useNavigate();
   const [name, setName] = useState("");
+  const [password, setPassword] = useState("123456");
+  const [nextRoute, setNextRoute] = useState("");
+
+  const [isPsswordConfirm, setIsPsswordConfirm] = useState(false);
+
+  const PasswordConfirm = () => {
+    const [inputValue, setInputValue] = useState(""); // Khởi tạo state
+
+    // Hàm xử lý khi nội dung input thay đổi
+    const handleChange = (event) => {
+      setInputValue(event.target.value); // Cập nhật giá trị từ input
+    };
+
+    // Hàm xử lý khi form được submit
+    const handleSubmit = (event) => {
+      event.preventDefault(); // Ngăn không cho form reload trang
+
+      if (inputValue === password) {
+        navigate(nextRoute);
+      } else {
+        alert("Sai Mật Khẩu");
+      }
+    };
+    return (
+      <div className=" absolute h-full w-full  flex items-center justify-center">
+        <div className=" bg-white relative rounded-xl">
+          <h1
+            className=" font-bold text-red-500 absolute right-2 cursor-pointer"
+            onClick={() => {
+              setIsPsswordConfirm(false);
+            }}
+          >
+            X
+          </h1>
+          <form onSubmit={handleSubmit} className="space-y-4 mx-4 my-6">
+            <input
+              type="text"
+              value={inputValue}
+              onChange={handleChange}
+              placeholder="Nhập mật khẩu"
+              className="border rounded px-3 py-2 w-full"
+            />
+            <button
+              type="submit"
+              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            >
+              Xác nhận
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  };
   const handleChange = (e) => {
     setName(e.target.value);
   };
@@ -19,7 +72,7 @@ function MainMenu() {
     <div className=" w-full h-full bg-black flex justify-center items-center">
       <div className=" absolute z-20 top-32 left-[350px] space-y-12">
         <div className="  relative">
-          <div className=" text-black absolute text-6xl font-bold z-20 flex flex-col justify-center items-center w-full h-full">
+          <div className=" text-black absolute space-y-2 text-6xl font-bold z-20 flex flex-col justify-center items-center w-full h-full">
             <input
               placeholder="Nhập tên"
               value={name}
@@ -45,13 +98,23 @@ function MainMenu() {
         <div className=" flex flex-col gap-y-2">
           <button
             onClick={() => navigate("guide")}
-            className=" text-black bg-yellow-600 rounded-xl font-bold text-3xl px-8 py-4"
+            className=" text-black bg-yellow-600 rounded-xl font-bold text-3xl px-8 py-2"
           >
             HƯỚNG DẪN
           </button>
           <button
+            onClick={() => {
+              setNextRoute("questions");
+              // onNavigate({ route: routes.ques });
+              setIsPsswordConfirm(true);
+            }}
+            className=" text-black bg-yellow-600 rounded-xl font-bold text-3xl px-8 py-2"
+          >
+            CÂU HỎI
+          </button>
+          <button
             onClick={() => navigate("score-board")}
-            className=" text-black bg-yellow-600 rounded-xl font-bold text-3xl px-8 py-4"
+            className=" text-black bg-yellow-600 rounded-xl font-bold text-3xl px-8 py-2"
           >
             BẢNG ĐIỂM
           </button>
@@ -60,6 +123,11 @@ function MainMenu() {
 
       <img src={background} alt=" " className=" absolute"></img>
       {/* <button>Start</button> */}
+      {isPsswordConfirm && (
+        <div className=" z-50 absolute w-full h-full">
+          <PasswordConfirm />
+        </div>
+      )}
     </div>
   );
 }

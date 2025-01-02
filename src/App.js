@@ -10,6 +10,7 @@ import MainMenu from "./routes/MainMenu";
 import Game from "./routes/Game";
 import Guide from "./routes/Guide";
 import ScoreBoard from "./routes/ScoreBoard";
+import Lesson from "./routes/Lesson";
 
 function App() {
   const router = createBrowserRouter(
@@ -19,6 +20,7 @@ function App() {
         <Route path="game" element={<Game />} />
         <Route path="guide" element={<Guide />} />
         <Route path="score-board" element={<ScoreBoard />} />
+        <Route path="questions" element={<Lesson />} />
       </Route>
     )
   );
