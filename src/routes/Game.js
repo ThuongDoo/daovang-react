@@ -33,6 +33,7 @@ function Game() {
     const fetchDate = async () => {
       await api.get("lesson/all").then((res) => {
         setQuestions(res.data.lessons);
+        console.log(res.data.lessons);
       });
     };
     fetchDate();
